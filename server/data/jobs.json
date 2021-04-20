@@ -16,5 +16,29 @@
     "companyId": "SJV0-wdOM",
     "title": "Full-Stack Developer",
     "description": "We are looking for a Full-Stack Developer familiar with Node.js, Express, and React."
+  },
+  {
+    "id": "HkHbRCr8_",
+    "companyId": "HJRa-DOuG",
+    "title": "Big Data Developer",
+    "description": "Spark, Kafka, Hadoop developer"
+  },
+  {
+    "id": "SyQOIisUO",
+    "companyId": "HJRa-DOuG",
+    "title": "Spark Developer",
+    "description": "Spark, Kafka, Java, Hadoop developer"
+  },
+  {
+    "id": "H1XnUsiLd",
+    "companyId": "HJRa-DOuG",
+    "title": "Python Developer",
+    "description": "Sr. Python developer"
+  },
+  {
+    "id": "ry_ajsi8d",
+    "companyId": "SJV0-wdOM",
+    "title": "Salesforce developer",
+    "description": "Sr. Salesforce developer"
   }
 ]
