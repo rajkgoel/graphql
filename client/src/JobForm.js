@@ -20,9 +20,8 @@ export class JobForm extends Component {
     this.setState({error: ''})
     event.preventDefault();
     const {title, description} = this.state;
-    const companyId = "SJV0-wdOM";
     try {
-      let job = await createJob({companyId, title, description});
+      let job = await createJob({title, description});
       if (!job) {
         throw new Error(`Some error occurred while creating new Job: ${title}`)
       }
@@ -60,7 +59,7 @@ export class JobForm extends Component {
             </div>
           </form>
         </div>
-        <div className="title">{error}</div>
+        <div className="box">{error}</div>
       </div>
     );
   }
