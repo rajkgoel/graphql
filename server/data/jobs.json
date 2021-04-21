@@ -40,5 +40,23 @@
     "companyId": "SJV0-wdOM",
     "title": "Salesforce developer",
     "description": "Sr. Salesforce developer"
+  },
+  {
+    "id": "B1h0b2i8d",
+    "companyId": "SJV0-wdOM",
+    "title": "C++ Developer",
+    "description": "Maintainance of legacy applications"
+  },
+  {
+    "id": "S1L_iU3U_",
+    "companyId": "SJV0-wdOM",
+    "title": "Salesforce developer",
+    "description": "Sr. Salesforce developer"
+  },
+  {
+    "id": "SkP0WbpL_",
+    "companyId": "SJV0-wdOM",
+    "title": "Automation Tester",
+    "description": "Selenium"
   }
 ]

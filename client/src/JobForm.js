@@ -1,9 +1,14 @@
 import React, { Component } from 'react';
+import { createJob } from "./requests";
 
 export class JobForm extends Component {
   constructor(props) {
     super(props);
-    this.state = {title: '', description: ''};
+    this.state = {
+      title: '', 
+      description: '',
+      error: ''
+    };
   }
 
   handleChange(event) {
@@ -11,13 +16,24 @@ export class JobForm extends Component {
     this.setState({[name]: value});
   }
 
-  handleClick(event) {
+  async handleClick(event) {
+    this.setState({error: ''})
     event.preventDefault();
-    console.log('should post a new job:', this.state);
+    const {title, description} = this.state;
+    const companyId = "SJV0-wdOM";
+    try {
+      let job = await createJob({companyId, title, description});
+      if (!job) {
+        throw new Error(`Some error occurred while creating new Job: ${title}`)
+      }
+      this.props.history.push(`/jobs/${job.id}`);
+    } catch(error) {
+      this.setState({ error: error.message || error })
+    }
   }
 
   render() {
-    const {title, description} = this.state;
+    const {title, description, error} = this.state;
     return (
       <div>
         <h1 className="title">New Job</h1>
@@ -44,6 +60,7 @@ export class JobForm extends Component {
             </div>
           </form>
         </div>
+        <div className="title">{error}</div>
       </div>
     );
   }
