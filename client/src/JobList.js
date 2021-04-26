@@ -4,6 +4,9 @@ import { Link } from 'react-router-dom';
 export class JobList extends Component {
   render() {
     const {jobs} = this.props;
+    if (!jobs) {
+      return null;
+    }
     return (
       <ul className="box">
         {jobs.map(this.renderJob.bind(this))}

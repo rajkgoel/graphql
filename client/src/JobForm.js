@@ -27,7 +27,8 @@ export class JobForm extends Component {
       }
       this.props.history.push(`/jobs/${job.id}`);
     } catch(error) {
-      this.setState({ error: error.message || error })
+      this.setState({ error: error.message });
+      console.log(error);
     }
   }
 
