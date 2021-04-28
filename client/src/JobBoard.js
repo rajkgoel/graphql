@@ -1,6 +1,6 @@
 import React, { Component } from 'react';
 import { JobList } from './JobList';
-import { loadJobs } from "./requests";
+import { loadJobs } from "./data/requests";
 
 export class JobBoard extends Component {
   constructor(props) {

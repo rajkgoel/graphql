@@ -1,5 +1,5 @@
 import React, { Component } from 'react';
-import { createJob } from "./requests";
+import { createJob } from "./data/requests";
 
 export class JobForm extends Component {
   constructor(props) {

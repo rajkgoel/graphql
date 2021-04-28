@@ -1,5 +1,5 @@
 import React, { Component } from 'react';
-import { loadCompany } from './requests';
+import { loadCompany } from './data/requests';
 import { JobList } from './JobList';
 
 export class CompanyDetail extends Component {
