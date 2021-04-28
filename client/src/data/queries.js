@@ -1,41 +1,42 @@
 import { gql } from "graphql-tag";
 
+const jobDetailFragment = gql`
+    fragment JobDetail on Job {
+        id
+        title
+        description
+        company {
+            id
+            name
+        }
+    }
+`;
+
 export const jobQuery = gql`
     query JobQuery($id: ID!){
         job(id: $id) {
-            id
-            title
-            description
-            company {
-                id
-                name
-            }
+            ...JobDetail
         }
-    }`;
+    }
+    ${jobDetailFragment}
+`;
 
 export const loadJobsQuery = gql`{
         jobs {
-            id
-            title
-            company {
-                id
-                name
-            }
+            ...JobDetail
         }
-    }`;
+    }
+    ${jobDetailFragment}
+`;
 
 export const createJobMutation = gql`
     mutation CreateJob($input: CreateJobInput) {
         job: createJob(input: $input) {
-            id
-            title
-            description
-            company {
-                id
-                name
-            }
+            ...JobDetail
         }
-    }`;
+    }
+    ${jobDetailFragment}
+`;
 
 export const loadCompanyQuery = gql`
     query CompanyQuery($id: ID!){
@@ -48,4 +49,5 @@ export const loadCompanyQuery = gql`
                 title
             }
         }
-    }`;
+    }
+`;
